@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
-img=cv2.imread('./TEST.png') #Load image (e.g. C:/TEST.png)
+img=cv2.imread('./TEST.png',cv2.IMREAD_GRAYSCALE) #Load image (e.g. C:/TEST.png)
 f=np.fft.fft2(img)
 fshift=np.fft.fftshift(f)
 mg=20*np.log(np.abs(fshift)) #Convert to grayscale images of order 0-255
